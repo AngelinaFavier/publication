@@ -178,7 +178,7 @@ button { color: inherit; }
 .projects-heading h2 { font-size: clamp(3rem, 5.5vw, 5.6rem); }
 .projects-intro { max-width: 330px; margin: 0 0 8px; color: var(--muted); font-size: .83rem; }
 .project-list { display: grid; gap: 94px; margin-top: 82px; }
-.project-row { display: grid; grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr); align-items: center; gap: clamp(36px, 6.5vw, 92px); }
+.project-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: clamp(36px, 6.5vw, 92px); }
 .project-row:nth-child(even) .project-copy { grid-column: 2; grid-row: 1; }
 .project-row:nth-child(even) .project-gallery { grid-column: 1; grid-row: 1; }
 .project-number { display: flex; align-items: center; gap: 15px; margin-bottom: 23px; color: var(--muted); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; }
@@ -304,7 +304,7 @@ button { color: inherit; }
   .section-pad { padding-right: 6vw; padding-left: 6vw; }
   .hero-content { width: 88%; }
   .about-grid { grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr); gap: 50px; }
-  .project-row { grid-template-columns: minmax(220px, .78fr) minmax(0, 1.22fr); gap: 38px; }
+  .project-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px; }
   .project-copy h3 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); }
   .journey-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, .82fr); gap: 42px; }
   .sketch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 240px 240px; }

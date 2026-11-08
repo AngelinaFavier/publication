@@ -219,17 +219,13 @@ button { color: inherit; }
 .sketch-heading h2 { color: #fff; font-size: clamp(3rem, 5.5vw, 5.4rem); }
 .sketch-heading h2 em { color: #e2beb3; }
 .sketch-heading > p { max-width: 350px; margin: 0 0 4px; color: rgba(255,255,255,.7); font-size: .82rem; }
-.sketch-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.18fr .82fr .82fr; grid-template-rows: 205px 205px; gap: 13px; margin-top: 57px; }
+.sketch-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: 270px; gap: 13px; margin-top: 57px; }
 .sketch-card { position: relative; overflow: hidden; margin: 0; background: #f5f1eb; }
-.sketch-card img { width: 100%; height: 100%; object-fit: contain; padding: 13px; transition: transform .6s ease; }
+.sketch-card img { width: 100%; height: 100%; object-fit: contain; padding: 18px; transition: transform .6s ease; }
 .sketch-card:hover img { transform: scale(1.04); }
 .sketch-card img.rotate-clockwise { transform: rotate(90deg); }
 .sketch-card:hover img.rotate-clockwise { transform: rotate(90deg); }
 .sketch-card figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 30px 14px 10px; background: linear-gradient(0deg, rgba(40,25,24,.7), transparent); color: #fff; font-size: .61rem; letter-spacing: .07em; opacity: .8; }
-.sketch-tall { grid-row: 1 / 3; }
-.sketch-wide { grid-column: 2; }
-.sketch-small { grid-column: 3; }
-.sketch-fourth { display: none; }
 .sketch-download { position: relative; z-index: 1; margin-top: 29px; }
 
 .journey { padding-top: 112px; padding-bottom: 116px; }
@@ -311,6 +307,8 @@ button { color: inherit; }
   .project-row { grid-template-columns: minmax(220px, .78fr) minmax(0, 1.22fr); gap: 38px; }
   .project-copy h3 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); }
   .journey-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, .82fr); gap: 42px; }
+  .sketch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 240px 240px; }
+  .sketch-card:last-child { grid-column: 1 / -1; }
   .site-footer { grid-template-columns: 1fr 1fr; }
   .site-footer > p { order: 3; }
   .back-top { justify-self: start; }
@@ -383,14 +381,9 @@ button { color: inherit; }
   .portfolio-link h3 { font-size: 1.25rem; }
   .portfolio-link > .button { margin-top: 4px; }
   .sketch-heading > p { margin-top: 21px; }
-  .sketch-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 180px; gap: 9px; margin-top: 35px; }
-  .sketch-tall { grid-row: auto; }
-  .sketch-wide { grid-column: auto; }
-  .sketch-small { grid-column: auto; }
-  .sketch-fourth { display: block; }
+  .sketch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 180px 180px; gap: 9px; margin-top: 35px; }
+  .sketch-card:last-child { grid-column: 1 / -1; }
   .sketch-card img { padding: 8px; }
-  .sketch-card img.rotate-clockwise,
-  .sketch-card:hover img.rotate-clockwise { transform: rotate(90deg); }
   .journey-heading .button { margin-top: 25px; }
   .journey-grid { grid-template-columns: 1fr; gap: 47px; margin-top: 47px; }
   .timeline::before { left: 73px; }
@@ -414,7 +407,7 @@ button { color: inherit; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
   .availability-bar p { min-width: 0; }
   .availability-bar a { margin-left: 27px; }
-  .sketch-grid { grid-template-rows: 180px 155px; }
+  .sketch-grid { grid-template-rows: 155px 155px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

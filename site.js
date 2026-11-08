@@ -6,11 +6,14 @@
   const header = document.querySelector(".site-header");
   const brand = document.querySelector(".brand");
 
-  brand?.addEventListener("click", (event) => {
+  const scrollToTop = (event) => {
     event.preventDefault();
     if (window.location.hash !== "#haut") window.history.replaceState(null, "", "#haut");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    window.scrollTo({ top: 0, behavior });
+  };
+  brand?.addEventListener("click", scrollToTop);
+  document.querySelector(".back-top")?.addEventListener("click", scrollToTop);
 
   const updateHeader = () => {
     if (header) header.classList.toggle("is-scrolled", window.scrollY > 40);
